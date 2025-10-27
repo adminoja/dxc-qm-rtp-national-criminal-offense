@@ -1,0 +1,105 @@
+#################################
+##  DEV Configuration
+#################################
+
+# ===============================
+#  Spring Cloud Config
+# ===============================
+spring.cloud.config.enabled: false 
+spring.cloud.discovery.enabled: false
+eureka.client.enabled: false
+
+# ===============================
+#  Basic Cofnig
+# ===============================
+# Server port
+server.port: 8081
+
+# Server Error never,on_trace_param,always
+server.error: # Attention Required!!
+  include-stacktrace: always 
+  include-message: always 
+  include-binding-errors: always 
+  include-exception: false
+
+# H2 Console
+spring.h2.console.enabled: true # Attention Required!!
+spring.h2.console.port: 0
+
+# Open API Specification (Swagger 3)
+springdoc.api-docs.enabled: true
+springdoc.swagger-ui.enabled: true
+springdoc.swagger-ui.filter: true
+
+
+# Features
+spring.liquibase.enabled: false
+
+# เพิ่ม compatibility-verifier
+spring.cloud.compatibility-verifier.enabled: false
+
+# ===============================
+## Log Config
+# ===============================
+# Log Level 
+logging.level:  # Attention Required!!
+  th.go.dxc: DEBUG 
+  org.springframework.web: DEBUG  
+  org.springframework.ws.client.core.WebServiceTemplate: DEBUG
+  org.springframework.ws.client.MessageTracing: DEBUG
+  org.springframework.ws.server.MessageTracing: DEBUG
+  org.springframework.ws.client.MessageTracing.sent: DEBUG
+  org.springframework.ws.server.MessageTracing.sent: DEBUG
+  org.springframework.ws.client.MessageTracing.received: DEBUG
+  org.springframework.ws.server.MessageTracing.received: DEBUG
+  sun.security: DEBUG
+
+# Log File
+logging.file.name: logs/${spring.application.name}-${spring.profiles.active}.log
+logging.logback.rollingpolicy:
+  file-name-pattern: logs/${spring.application.name}-${spring.profiles.active}-%d{yyyy-MM-dd}.%i.log
+  max-file-size: 10MB
+  max-history: 7
+  total-size-cap: 0B
+  clean-history-on-start: true # Attention Required!!
+  
+# ===============================
+#  Spring Security Config
+# ===============================
+spring.security.oauth2.resourceserver:
+  jwt:
+    issuer-uri: https://sso.dxc.go.th/auth/realms/DXC
+
+# ===============================
+#  Application Cofig
+# ===============================
+
+# POLICE RAW DB Datasource
+infra.datasource.police-raw-db:
+  jdbc:
+    url: jdbc:mysql://10.14.33.43:3306/police_raw
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: qm
+    password: 0e:t[hk'
+  hikari:
+    connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+    minimum-idle: 5 #minimum number of idle connections maintained by HikariCP in a connection pool
+    maximum-pool-size: 10 #maximum pool size
+    idle-timeout: 10000 #maximum idle time for connection
+    max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  jpa:
+    show-sql: false # Attention Required!!
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true  # have the same EntityManager until the web request is finished
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      hibernate.implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#      hibernate.hbm2ddl.import_files: sql/dxc_sam_db/dxc_user_search_log_v1-insert.sql # Attention Required!!
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none # Attention Required!!
+      # Extra config
+      javax.persistence.schema-generation.scripts.action: none # Attention Required!!
+#      javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql # Attention Required!!
+#      javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql # Attention Required!!

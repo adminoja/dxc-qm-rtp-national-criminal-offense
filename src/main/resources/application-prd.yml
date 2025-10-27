@@ -1,0 +1,93 @@
+#--------------------------
+# Base Config
+#--------------------------
+server.port: 0
+
+# ===============================
+#  Spring Cloud Config
+# ===============================
+# Discovery Client
+spring.cloud.discovery.enabled: true
+eureka.client.enabled: true
+
+eureka.instance:
+#  environment: staging
+#  hostname: 10.129.214.131 # Use when test via VPN (different IP)
+  preferIpAddress: true # Use when ip is valid
+  leaseRenewalIntervalInSeconds: 10   # SBA
+  nonSecurePortEnabled: true
+  securePortEnabled: false
+  metadataMap:    
+    startup: ${random.int}    #needed to trigger info and endpoint update after restart (SBA)
+    user:  configUser
+    password:  c0nf1gP9ssw0rd
+    
+eureka.client:  
+  registerWithEureka: true
+  fetchRegistry: true
+  registryFetchIntervalSeconds: 5    # SBA
+  serviceUrl.defaultZone: http://cloud-registry-01.ad.thaidxc.org:8761/eureka,http://cloud-registry-02.ad.thaidxc.org:8761/eureka
+  
+# Config Client
+spring.cloud.config.enabled: true
+spring.config.import: "configserver:http://configUser:c0nf1gP9ssw0rd@config-01.dxc.go.th:8888/"
+
+# เพิ่ม compatibility-verifier
+spring.cloud.compatibility-verifier.enabled: false
+
+# ===============================
+## Log Config
+# ===============================
+# Log Level 
+logging.level:  # Attention Required!!
+  th.go.dxc: INFO 
+  org.springframework.web: INFO  
+  org.springframework.ws.client.core.WebServiceTemplate: INFO
+  org.springframework.ws.client.MessageTracing: INFO
+  org.springframework.ws.server.MessageTracing: INFO
+  org.springframework.ws.client.MessageTracing.sent: INFO
+  org.springframework.ws.server.MessageTracing.sent: INFO
+  org.springframework.ws.client.MessageTracing.received: INFO
+  org.springframework.ws.server.MessageTracing.received: INFO
+  sun.security: INFO
+
+# ===============================
+#  Spring Security Config
+# ===============================
+spring.security.oauth2.resourceserver:
+  jwt:
+    issuer-uri: https://sso.dxc.go.th/auth/realms/DXC
+
+# ===============================
+#  Application Cofig
+# ===============================
+
+# POLICE RAW DB Datasource
+infra.datasource.police-raw-db:
+  jdbc:
+    url: jdbc:mysql://10.14.33.43:3306/police_raw
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: qm
+    password: 0e:t[hk'
+  hikari:
+    connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+    minimum-idle: 5 #minimum number of idle connections maintained by HikariCP in a connection pool
+    maximum-pool-size: 10 #maximum pool size
+    idle-timeout: 10000 #maximum idle time for connection
+    max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  jpa:
+    show-sql: false # Attention Required!!
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true  # have the same EntityManager until the web request is finished
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      hibernate.implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#      hibernate.hbm2ddl.import_files: sql/dxc_sam_db/dxc_user_search_log_v1-insert.sql # Attention Required!!
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none # Attention Required!!
+      # Extra config
+      javax.persistence.schema-generation.scripts.action: none # Attention Required!!
+#      javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql # Attention Required!!
+#      javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql # Attention Required!!
