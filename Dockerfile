@@ -1,4 +1,4 @@
-FROM ibm-semeru-runtimes:17-jdk as builder
+FROM eclipse-temurin:17-jdk as builder
 
 WORKDIR app
  
@@ -8,7 +8,7 @@ RUN echo $JAR_FILE
 COPY ${JAR_FILE} /opt/app/app.jar
 RUN java -Djarmode=layertools -jar /opt/app/app.jar extract
 
-FROM ibm-semeru-runtimes:17-jdk
+FROM eclipse-temurin:17-jdk
 RUN mkdir -p /opt/app/ssl \
 && mkdir -p /opt/app/static \
 && mkdir -p /opt/app/config \
