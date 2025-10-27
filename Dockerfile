@@ -26,9 +26,9 @@ RUN echo $JAVA_OPTS
 
 # ENTRYPOINT ["java","-cp","/opt/app","-Djava.security.egd=file:/dev/./urandom","-Djava.net.preferIPv4Stack=true", "org.springframework.boot.loader.JarLauncher"]
 # ENTRYPOINT ["sh", "-c", \
-"java -server --enable-preview -XX:+UseContainerSupport \
--XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
-org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+# "java -server --enable-preview -XX:+UseContainerSupport \
+# -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+# org.springframework.boot.loader.JarLauncher ${0} ${@}"]
 # ENTRYPOINT ปลอดภัยต่อ container
 ENTRYPOINT ["java",
   "-server",
