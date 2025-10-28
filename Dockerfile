@@ -25,7 +25,14 @@ ARG JAVA_OPTS=""
 RUN echo $JAVA_OPTS 
 
 # ENTRYPOINT ["java","-cp","/opt/app","-Djava.security.egd=file:/dev/./urandom","-Djava.net.preferIPv4Stack=true", "org.springframework.boot.loader.JarLauncher"]
+# ENTRYPOINT ["sh", "-c", \
+# "java -server --enable-preview -XX:+UseContainerSupport \
+# -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+# org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+
 ENTRYPOINT ["sh", "-c", \
- "java -server --enable-preview -XX:+UseContainerSupport \
- -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+"java -server --enable-preview -XX:+UseContainerSupport \
+ -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+ -cp '/opt/app/*:/opt/app/spring-boot-loader/*:/opt/app/application' \
  org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+
