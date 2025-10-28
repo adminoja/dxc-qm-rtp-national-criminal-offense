@@ -30,5 +30,4 @@ ENTRYPOINT ["sh", "-c", \
  -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
  org.springframework.boot.loader.JarLauncher ${0} ${@}"]
  
-# ENTRYPOINT ปลอดภัยต่อ container
 # ENTRYPOINT ["sh", "-c", "java -Xms512m -Xmx2g -XX:+UseContainerSupport -XX:MaxRAMPercentage=75 -XX:+UseG1GC -XX:+UseStringDeduplication -Djava.security.egd=file:/dev/./urandom -Djava.net.preferIPv4Stack=true $JAVA_OPTS org.springframework.boot.loader.JarLauncher"]
