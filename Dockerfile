@@ -16,10 +16,15 @@ RUN mkdir -p /opt/app/ssl \
 && mkdir -p /opt/app/cache \
 && mkdir -p /opt/app/logs
 WORKDIR /opt/app
-COPY --from=builder app/dependencies/ ./
-COPY --from=builder app/spring-boot-loader/ ./
-COPY --from=builder app/snapshot-dependencies/ ./
-COPY --from=builder app/application/ ./
+# COPY --from=builder app/dependencies/ ./
+# COPY --from=builder app/spring-boot-loader/ ./
+# COPY --from=builder app/snapshot-dependencies/ ./
+# COPY --from=builder app/application/ ./
+COPY --from=builder app/dependencies/ ./dependencies/
+COPY --from=builder app/spring-boot-loader/ ./spring-boot-loader/
+COPY --from=builder app/snapshot-dependencies/ ./snapshot-dependencies/
+COPY --from=builder app/application/ ./application/
+
 
 ARG JAVA_OPTS=""
 RUN echo $JAVA_OPTS 
