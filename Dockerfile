@@ -47,7 +47,7 @@ ENTRYPOINT ["sh", "-c", \
   org.springframework.boot.loader.JarLauncher ${0} ${@}"]
 
 # ENTRYPOINT ["sh", "-c", \
-#  "java -server --enable-preview -XX:+UseContainerSupport \
-#  -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
-#  -cp '/opt/app/spring-boot-loader/*.jar:/opt/app/dependencies/*.jar:/opt/app/snapshot-dependencies/*.jar:/opt/app/application/*.jar' \
-#  org.springframework.boot.loader.JarLauncher"]
+# "java -server --enable-preview -XX:+UseContainerSupport \
+# -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+# -cp '/opt/app/spring-boot-loader/*.jar:/opt/app/dependencies/*.jar:/opt/app/snapshot-dependencies/*.jar:/opt/app/application/*.jar' \
+# org.springframework.boot.loader.JarLauncher"]
