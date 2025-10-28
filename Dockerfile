@@ -40,14 +40,14 @@ RUN echo $JAVA_OPTS
 # -cp '/opt/app/*:/opt/app/spring-boot-loader/*:/opt/app/application' \
 # org.springframework.boot.loader.JarLauncher ${0} ${@}"]
 
-# ENTRYPOINT ["sh", "-c", \
-#  "java -server --enable-preview -XX:+UseContainerSupport \
-#  -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
-#  -cp '/opt/app/spring-boot-loader:/opt/app/dependencies/*:/opt/app/snapshot-dependencies/*:/opt/app/application' \
-#  org.springframework.boot.loader.JarLauncher ${0} ${@}"]
-
 ENTRYPOINT ["sh", "-c", \
   "java -server --enable-preview -XX:+UseContainerSupport \
   -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
-  -cp '/opt/app/spring-boot-loader/*.jar:/opt/app/dependencies/*.jar:/opt/app/snapshot-dependencies/*.jar:/opt/app/application/*.jar' \
-  org.springframework.boot.loader.JarLauncher"]
+  -cp '/opt/app/spring-boot-loader:/opt/app/dependencies/*:/opt/app/snapshot-dependencies/*:/opt/app/application' \
+  org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+
+# ENTRYPOINT ["sh", "-c", \
+#  "java -server --enable-preview -XX:+UseContainerSupport \
+#  -XX:+AlwaysActAsServerClassMachine -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
+#  -cp '/opt/app/spring-boot-loader/*.jar:/opt/app/dependencies/*.jar:/opt/app/snapshot-dependencies/*.jar:/opt/app/application/*.jar' \
+#  org.springframework.boot.loader.JarLauncher"]
