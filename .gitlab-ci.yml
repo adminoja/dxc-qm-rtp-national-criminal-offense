@@ -1,6 +1,6 @@
-image: adoptopenjdk/maven-openjdk17-openj9
+# image: adoptopenjdk/maven-openjdk17-openj9
 # image: eclipse-temurin:17-jdk
-# image: maven:3.9.6-eclipse-temurin-17
+image: maven:3.9.6-eclipse-temurin-17
 
 stages:
   - package-and-deploy-jar
