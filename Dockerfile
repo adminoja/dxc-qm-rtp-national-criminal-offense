@@ -49,6 +49,6 @@ RUN echo $JAVA_OPTS
 # org.springframework.boot.loader.JarLauncher ${0} ${@}"]
 
 # ENTRYPOINT ["sh", "-c", \
-"java -server -XX:+UseContainerSupport -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher"]
+# "java -server -XX:+UseContainerSupport -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher"]
 
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -cp '/opt/app/spring-boot-loader:/opt/app/dependencies/*:/opt/app/snapshot-dependencies/*:/opt/app/application' org.springframework.boot.loader.JarLauncher"]
