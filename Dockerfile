@@ -1,5 +1,5 @@
 # FROM eclipse-temurin:17-jdk as builder
-FROM adoptopenjdk/openjdk17-openj9:jdk-17.0.8_7_openj9-0.41.0-alpine-slim as builder
+FROM adoptopenjdk:17-jdk-openj9 as builder
 
 WORKDIR app
  
@@ -10,7 +10,7 @@ COPY ${JAR_FILE} /opt/app/app.jar
 RUN java -Djarmode=layertools -jar /opt/app/app.jar extract
 
 # FROM eclipse-temurin:17-jdk
-FROM adoptopenjdk/openjdk17-openj9:jdk-17.0.8_7_openj9-0.41.0-alpine-slim
+FROM adoptopenjdk:17-jdk-openj9
 RUN mkdir -p /opt/app/ssl \
 && mkdir -p /opt/app/static \
 && mkdir -p /opt/app/config \
