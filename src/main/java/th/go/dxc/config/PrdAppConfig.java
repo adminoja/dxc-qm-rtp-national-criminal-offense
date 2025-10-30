@@ -10,10 +10,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import lombok.extern.slf4j.Slf4j;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
-import th.go.dxc.app.service.RtpCriminalOffenceService;
-import th.go.dxc.app.service.RtpCriminalOffenceServiceImpl;
-import th.go.dxc.app.util.RtpCriminalOffenceServiceImplMapper;
-import th.go.dxc.infra.datasource.policeraw.repository.RtpCriminalOffenceRepository;
+import th.go.dxc.app.service.RtpNationalCriminalOffenceService;
+import th.go.dxc.app.service.RtpNationalCriminalOffenceServiceImpl;
+import th.go.dxc.app.util.RtpNationalCriminalOffenceServiceImplMapper;
+import th.go.dxc.infra.datasource.policeraw.repository.RtpNationalCriminalOffenceRepository;
 import th.go.dxc.share.security.service.SecurityService;
 import th.go.dxc.share.security.service.SecurityServiceJwtImpl;
 
@@ -40,7 +40,7 @@ public class PrdAppConfig {
 	}
 
 	@Bean
-	public RtpCriminalOffenceService rtpCriminalOffenceService(RtpCriminalOffenceRepository repository ,RtpCriminalOffenceServiceImplMapper mapper) {
-		return new RtpCriminalOffenceServiceImpl(repository, mapper);
+	public RtpNationalCriminalOffenceService rtpNationalCriminalOffenceService(RtpNationalCriminalOffenceRepository repository ,RtpNationalCriminalOffenceServiceImplMapper mapper) {
+		return new RtpNationalCriminalOffenceServiceImpl(repository, mapper);
 	}
 }

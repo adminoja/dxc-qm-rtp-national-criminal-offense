@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import lombok.Data;
 
 @Data
-public class RtpCriminalOffenceEntityFilter {
+public class RtpNationalCriminalOffenceEntityFilter {
 	
 	private Integer id;
 	private Integer regionNum;

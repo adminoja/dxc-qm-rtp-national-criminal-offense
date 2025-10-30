@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Schema(description = "ข้อมูลการกระทำผิดในคดีอาญาทั่วประเทศ")
-public class RtpCriminalOffence {
+public class RtpNationalCriminalOffence {
 
 	private Integer id;
 	private Integer regionNum;

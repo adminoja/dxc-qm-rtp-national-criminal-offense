@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Schema(description = "เงื่อนไขการค้นหาข้อมูล")
-public class RtpCriminalOffenceFilter {
+public class RtpNationalCriminalOffenceFilter {
 	
 	@Schema(description = "รหัสข้อมูล")
 	private Integer id;

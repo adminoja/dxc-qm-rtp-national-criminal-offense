@@ -7,13 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
 
-import th.go.dxc.infra.datasource.policeraw.entity.RtpCriminalOffenceEntity;
-import th.go.dxc.infra.datasource.policeraw.entity.RtpCriminalOffenceEntityFilter;
+import th.go.dxc.infra.datasource.policeraw.entity.RtpNationalCriminalOffenceEntity;
+import th.go.dxc.infra.datasource.policeraw.entity.RtpNationalCriminalOffenceEntityFilter;
 
-public interface RtpCriminalOffenceRepository extends PagingAndSortingRepository<RtpCriminalOffenceEntity, Integer>,
-		QueryByExampleExecutor<RtpCriminalOffenceEntity>, JpaSpecificationExecutor<RtpCriminalOffenceEntity> {
+public interface RtpNationalCriminalOffenceRepository extends PagingAndSortingRepository<RtpNationalCriminalOffenceEntity, Integer>,
+		QueryByExampleExecutor<RtpNationalCriminalOffenceEntity>, JpaSpecificationExecutor<RtpNationalCriminalOffenceEntity> {
 	@Query(nativeQuery = true, 
-			countQuery = "SELECT COUNT(*) FROM " + RtpCriminalOffenceEntity.ENTITY_TABLE_NAME + " a "
+			countQuery = "SELECT COUNT(*) FROM " + RtpNationalCriminalOffenceEntity.ENTITY_TABLE_NAME + " a "
 				+ "where (:#{#filter.id} is null or a.id = :#{#filter.id})"
 				+ "and (:#{#filter.regionNum} is null or a.region_num = :#{#filter.regionNum})"
 				+ "and (:#{#filter.regionCode} is null or a.region_code = :#{#filter.regionCode})"
@@ -37,7 +37,7 @@ public interface RtpCriminalOffenceRepository extends PagingAndSortingRepository
 				+ "and (:#{#filter.lawNum} is null or a.law_num = :#{#filter.lawNum})"
 				+ "and (:#{#filter.lawName} is null or a.law_name = :#{#filter.lawName})"
 				+ "and (:#{#filter.actionType} is null or a.action_type = :#{#filter.actionType})"
-			, value = "SELECT * FROM " + RtpCriminalOffenceEntity.ENTITY_TABLE_NAME + " a "
+			, value = "SELECT * FROM " + RtpNationalCriminalOffenceEntity.ENTITY_TABLE_NAME + " a "
 					+ "where (:#{#filter.id} is null or a.id = :#{#filter.id})"
 					+ "and (:#{#filter.regionNum} is null or a.region_num = :#{#filter.regionNum})"
 					+ "and (:#{#filter.regionCode} is null or a.region_code = :#{#filter.regionCode})"
@@ -62,6 +62,6 @@ public interface RtpCriminalOffenceRepository extends PagingAndSortingRepository
 					+ "and (:#{#filter.lawName} is null or a.law_name = :#{#filter.lawName})"
 					+ "and (:#{#filter.actionType} is null or a.action_type = :#{#filter.actionType})"
 			)
-	public Page<RtpCriminalOffenceEntity> findByFilterNative(RtpCriminalOffenceEntityFilter filter, Pageable pageable);
+	public Page<RtpNationalCriminalOffenceEntity> findByFilterNative(RtpNationalCriminalOffenceEntityFilter filter, Pageable pageable);
 	
 }

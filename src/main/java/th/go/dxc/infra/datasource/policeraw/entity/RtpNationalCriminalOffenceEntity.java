@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = RtpCriminalOffenceEntity.ENTITY_TABLE_NAME)
-public class RtpCriminalOffenceEntity {
+@Table(name = RtpNationalCriminalOffenceEntity.ENTITY_TABLE_NAME)
+public class RtpNationalCriminalOffenceEntity {
 
 	public static final String ENTITY_TABLE_NAME = "rtp_criminal_offence";
 

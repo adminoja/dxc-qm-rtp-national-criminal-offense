@@ -17,9 +17,9 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.Valid;
-import th.go.dxc.app.model.RtpCriminalOffence;
-import th.go.dxc.app.model.RtpCriminalOffenceFilter;
-import th.go.dxc.app.service.RtpCriminalOffenceService;
+import th.go.dxc.app.model.RtpNationalCriminalOffence;
+import th.go.dxc.app.model.RtpNationalCriminalOffenceFilter;
+import th.go.dxc.app.service.RtpNationalCriminalOffenceService;
 import th.go.dxc.share.commons.dto.PageDto;
 import th.go.dxc.share.commons.dto.PageRequestDto;
 import th.go.dxc.share.commons.util.ObjectMapperService;
@@ -27,13 +27,13 @@ import th.go.dxc.share.dto.ErrorDto;
 
 @Tags(value = { @Tag(name = "บริการค้นหาข้อมูล Linkage2") })
 @RestController
-@RequestMapping("/api/qm/v2/rtp/criminal-offence")
-public class RtpCriminalOffenceApiController {
+@RequestMapping("/api/qm/v2/rtp/national-criminal-offence")
+public class RtpNationalCriminalOffenceApiController {
 	
-	private final RtpCriminalOffenceService service;
+	private final RtpNationalCriminalOffenceService service;
 	private final ObjectMapperService mapper;
 	
-	public RtpCriminalOffenceApiController(RtpCriminalOffenceService service, ObjectMapperService mapper) {
+	public RtpNationalCriminalOffenceApiController(RtpNationalCriminalOffenceService service, ObjectMapperService mapper) {
 		super();
 		this.service = service;
 		this.mapper = mapper;
@@ -43,7 +43,7 @@ public class RtpCriminalOffenceApiController {
 	@ApiResponses({
 		@ApiResponse(responseCode = "200",description = "ระบบทำงานปกติ"
 				,content = @Content(mediaType = "application/json"
-				, schema = @Schema(implementation = RtpCriminalOffence.class))),
+				, schema = @Schema(implementation = RtpNationalCriminalOffence.class))),
 		
 		@ApiResponse(responseCode = "400",description = "เรียกใช้งานไม่ถูกต้อง"
 		,content = @Content(mediaType = "application/json"
@@ -61,10 +61,10 @@ public class RtpCriminalOffenceApiController {
 		,content = @Content(mediaType = "application/json"
 		, schema = @Schema(implementation = ErrorDto.class)))
 	})
-	@GetMapping("/findAll")
-	public PageDto<RtpCriminalOffence> findAll(@Valid @ParameterObject RtpCriminalOffenceFilter filter, @Valid @ParameterObject PageRequestDto pageableDto) {
+	@GetMapping("")
+	public PageDto<RtpNationalCriminalOffence> findAll(@Valid @ParameterObject RtpNationalCriminalOffenceFilter filter, @Valid @ParameterObject PageRequestDto pageableDto) {
 		Pageable pageable = mapper.mapPageable(pageableDto);
-		Page<RtpCriminalOffence> resultPage = service.findAll(filter, pageable);
+		Page<RtpNationalCriminalOffence> resultPage = service.findAll(filter, pageable);
 		return mapper.mapPageDto(resultPage);
 	}
 }
