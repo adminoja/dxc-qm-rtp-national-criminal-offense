@@ -1,6 +1,7 @@
 package th.go.dxc.share.security.model;
 
-import jakarta.persistence.Embeddable;
+import javax.persistence.Embeddable;
+
 import lombok.Data;
 
 @Embeddable
