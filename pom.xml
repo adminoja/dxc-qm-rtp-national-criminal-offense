@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>th.go.dxc</groupId>
 	<artifactId>dxc-qm-rtp-national-criminal-offense-service</artifactId>
-	<version>0.2.0-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	<name>dxc-qm-rtp-national-criminal-offense-service</name>
 	<description>บริการค้นหาข้อมูล การกระทำผิดในคดีอาญาทั่วประเทศ</description>
 
