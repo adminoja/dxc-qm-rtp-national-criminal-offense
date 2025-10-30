@@ -30,6 +30,7 @@ COPY --from=builder app/application/ ./
 # COPY --from=builder app/spring-boot-loader/ ./spring-boot-loader/
 # COPY --from=builder app/snapshot-dependencies/ ./snapshot-dependencies/
 # COPY --from=builder app/application/ ./application/
+COPY --from=builder /app/target/*.jar app.jar
 
 ARG JAVA_OPTS=""
 RUN echo $JAVA_OPTS 
