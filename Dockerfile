@@ -1,7 +1,8 @@
 # FROM adoptopenjdk/openjdk11-openj9:jdk-11.0.12_7_openj9-0.27.0-alpine-slim as builder
 # FROM eclipse-temurin:17-jdk as builder
 # FROM adoptopenjdk:17-jdk-openj9 as builder
-FROM ibm-semeru-runtimes:open-17-jdk as builder
+# FROM ibm-semeru-runtimes:open-17-jdk as builder
+FROM maven:3.9.9-eclipse-temurin-17 as builder
 
 WORKDIR app
  
@@ -11,9 +12,9 @@ RUN echo $JAR_FILE
 COPY ${JAR_FILE} /opt/app/app.jar
 RUN java -Djarmode=layertools -jar /opt/app/app.jar extract
 
-# FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jdk
 # FROM adoptopenjdk:17-jdk-openj9
-FROM ibm-semeru-runtimes:open-17-jdk
+# FROM ibm-semeru-runtimes:open-17-jdk
 RUN mkdir -p /opt/app/ssl \
 && mkdir -p /opt/app/static \
 && mkdir -p /opt/app/config \
@@ -56,7 +57,9 @@ RUN echo $JAVA_OPTS
 
 # ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -cp '/opt/app/spring-boot-loader:/opt/app/dependencies/*:/opt/app/snapshot-dependencies/*:/opt/app/application' org.springframework.boot.loader.JarLauncher"]
 
-ENTRYPOINT ["sh", "-c", \
-"java -XX:+IdleTuningCompactOnIdle \
--XX:+IdleTuningGcOnIdle -XX:+UseContainerSupport -Xshareclasses ${JAVA_OPTS} \
-org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+# ENTRYPOINT ["sh", "-c", \
+# "java -XX:+IdleTuningCompactOnIdle \
+# -XX:+IdleTuningGcOnIdle -XX:+UseContainerSupport -Xshareclasses ${JAVA_OPTS} \
+# org.springframework.boot.loader.JarLauncher ${0} ${@}"]
+
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar app.jar"]
