@@ -26,7 +26,7 @@ import th.go.dxc.share.commons.dto.PageRequestDto;
 import th.go.dxc.share.commons.util.ObjectMapperService;
 import th.go.dxc.share.dto.ErrorDto;
 
-@Tags(value = { @Tag(name = "บริการค้นหาข้อมูล Linkage2") })
+@Tags(value = { @Tag(name = "บริการค้นหาข้อมูล การกระทำผิดในคดีอาญาทั่วประเทศ", description = "สำนักงานตำรวจแห่งชาติ (สตช.)") })
 @RestController
 @RequestMapping("/api/qm/v2/rtp/national-criminal-offence")
 public class RtpNationalCriminalOffenceApiController {
@@ -40,7 +40,7 @@ public class RtpNationalCriminalOffenceApiController {
 		this.mapper = mapper;
 	}
 	
-	@Operation(summary = "บริการค้นหาข้อมูล Log ThaID Token",security = @SecurityRequirement(name="bearerAuth"))
+	@Operation(summary = "บริการค้นหาข้อมูล การกระทำผิดในคดีอาญาทั่วประเทศ (สตช.)", security = @SecurityRequirement(name="bearerAuth"))
 	@ApiResponses({
 		@ApiResponse(responseCode = "200",description = "ระบบทำงานปกติ"
 				,content = @Content(mediaType = "application/json"
