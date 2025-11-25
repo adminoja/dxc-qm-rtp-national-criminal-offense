@@ -62,4 +62,5 @@ RUN echo $JAVA_OPTS
 # -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} \
 # org.springframework.boot.loader.JarLauncher"]
 
-ENTRYPOINT ["/bin/sh", "-c", "exec java -server -XX:+UseG1GC -XX:+UseStringDeduplication ${JAVA_OPTS} org.springframework.boot.loader.JarLauncher"]
+ENTRYPOINT ["sh", "-c", "exec java -server -XX:+UseG1GC -XX:+UseStringDeduplication $JAVA_OPTS org.springframework.boot.loader.JarLauncher"]
+
