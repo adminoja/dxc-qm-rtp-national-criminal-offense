@@ -30,9 +30,6 @@ COPY --from=builder app/application/ ./
 ARG JAVA_OPTS=""
 RUN echo $JAVA_OPTS 
 
-# ลด ThreadStackSize
-ENV JAVA_OPTS="-XX:ThreadStackSize=256k"
-
 # ENTRYPOINT ["java","-cp","/opt/app","-Djava.security.egd=file:/dev/./urandom","-Djava.net.preferIPv4Stack=true", "org.springframework.boot.loader.JarLauncher"]
 # ENTRYPOINT ["sh", "-c", \
 # "java -server --enable-preview -XX:+UseContainerSupport \
