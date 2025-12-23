@@ -443,3 +443,485 @@
 2568-11-06 14:06:03.872 DEBUG [dxc-qm-rtp-national-criminal-offense-service,7c0d3dacb52392bc,7c0d3dacb52392bc] 10564 --- [http-nio-8081-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
 2568-11-06 14:06:03.927 DEBUG [dxc-qm-rtp-national-criminal-offense-service,7c0d3dacb52392bc,7c0d3dacb52392bc] 10564 --- [http-nio-8081-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [PageDto(totalPages=342140, totalElements=3421396, number=0, size=10, numberOfElements=10, content=[R (truncated)...]
 2568-11-06 14:06:03.943 DEBUG [dxc-qm-rtp-national-criminal-offense-service,7c0d3dacb52392bc,7c0d3dacb52392bc] 10564 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:08:08.198+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Starting DxcQmRtpNationalCriminalOffenseServiceApplication using Java 21.0.4 with PID 26104 (C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service\target\classes started by kitti in C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service)
+2025-12-23T23:08:08.207+07:00 DEBUG 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-23T23:08:08.208+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : The following 1 profile is active: "dev"
+2025-12-23T23:08:10.647+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-23T23:08:10.849+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 1 JPA repository interface.
+2025-12-23T23:08:12.442+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88a9af0e-7027-388a-b05d-7f09e2dca3e8
+2025-12-23T23:08:13.632+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-23T23:08:13.665+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-23T23:08:13.668+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-23T23:08:13.951+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5628 ms
+2025-12-23T23:08:14.314+07:00 DEBUG 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-23T23:08:14.318+07:00 DEBUG 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2025-12-23T23:08:14.369+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbHikariDataSource
+2025-12-23T23:08:14.369+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbDataSourceProperties
+2025-12-23T23:08:14.458+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaProperties
+2025-12-23T23:08:14.493+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaVendorAdapter
+2025-12-23T23:08:14.537+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbEntityManagerFactory
+2025-12-23T23:08:14.537+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getJdbcUrl = jdbc:mysql://10.14.33.43:3306/police_raw
+2025-12-23T23:08:14.538+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMinimumIdle = 5
+2025-12-23T23:08:14.539+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMaximumPoolSize = 10
+2025-12-23T23:08:14.539+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbJPA Properties: {hibernate.implicit_naming_strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl, javax.persistence.schema-generation.database.action=none, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl, javax.persistence.schema-generation.scripts.action=none, hibernate.dialect=org.hibernate.dialect.MySQL8Dialect}
+2025-12-23T23:08:14.562+07:00  WARN 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is greater than or equal to maxLifetime, disabling it.
+2025-12-23T23:08:14.562+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-23T23:08:18.147+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23dc70c1
+2025-12-23T23:08:18.150+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-23T23:08:18.222+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: policeRawDbPersistenceUnit]
+2025-12-23T23:08:18.349+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2025-12-23T23:08:19.285+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-23T23:08:19.397+07:00  WARN 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:82) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:176) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:118) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:122) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$1.execute(JdbcEnvironmentInitiator.java:398) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$1.execute(JdbcEnvironmentInitiator.java:367) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jdbc.WorkExecutor.executeReturningWork(WorkExecutor.java:56) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jdbc.AbstractReturningWork.accept(AbstractReturningWork.java:32) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.doWorkAndCommit(JdbcIsolationDelegate.java:89) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:64) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at th.go.dxc.DxcQmRtpNationalCriminalOffenseServiceApplication.main(DxcQmRtpNationalCriminalOffenseServiceApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.MySQL8Dialect]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:88) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:78) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	... 47 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class: org.hibernate.dialect.MySQL8Dialect
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:198) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:85) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	... 48 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 54 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 54 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 54 common frames omitted
+
+2025-12-23T23:08:19.412+07:00 ERROR 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+2025-12-23T23:08:19.413+07:00  WARN 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'policeRawDbEntityManagerFactory' defined in class path resource [th/go/dxc/infra/datasource/policeraw/PoliceRawDbDataSourceConfig.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+2025-12-23T23:08:19.413+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-23T23:08:19.431+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-23T23:08:19.437+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-23T23:08:19.457+07:00  INFO 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-23T23:08:19.495+07:00 ERROR 26104 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'policeRawDbEntityManagerFactory' defined in class path resource [th/go/dxc/infra/datasource/policeraw/PoliceRawDbDataSourceConfig.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at th.go.dxc.DxcQmRtpNationalCriminalOffenseServiceApplication.main(DxcQmRtpNationalCriminalOffenseServiceApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 15 common frames omitted
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [org.hibernate.dialect.MySQL8Dialect] as strategy [org.hibernate.dialect.Dialect]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:82) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:176) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:118) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:122) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	... 31 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.hibernate.dialect.MySQL8Dialect]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:88) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:78) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class: org.hibernate.dialect.MySQL8Dialect
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:198) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:85) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+	... 43 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 49 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 49 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: org.hibernate.dialect.MySQL8Dialect
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:202) ~[hibernate-core-7.2.0.Final.jar:7.2.0.Final]
+		... 49 common frames omitted
+
+2025-12-23T23:25:54.705+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Starting DxcQmRtpNationalCriminalOffenseServiceApplication using Java 21.0.4 with PID 39100 (C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service\target\classes started by kitti in C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service)
+2025-12-23T23:25:54.711+07:00 DEBUG 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-23T23:25:54.715+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : The following 1 profile is active: "dev"
+2025-12-23T23:25:56.869+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-23T23:25:57.084+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 1 JPA repository interface.
+2025-12-23T23:25:58.452+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88a9af0e-7027-388a-b05d-7f09e2dca3e8
+2025-12-23T23:25:59.503+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-23T23:25:59.538+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-23T23:25:59.539+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-23T23:25:59.804+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4937 ms
+2025-12-23T23:26:00.452+07:00 DEBUG 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-23T23:26:00.456+07:00 DEBUG 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2025-12-23T23:26:00.659+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbHikariDataSource
+2025-12-23T23:26:00.672+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbDataSourceProperties
+2025-12-23T23:26:00.837+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaProperties
+2025-12-23T23:26:00.916+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaVendorAdapter
+2025-12-23T23:26:01.009+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbEntityManagerFactory
+2025-12-23T23:26:01.009+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getJdbcUrl = jdbc:mysql://10.14.33.43:3306/police_raw
+2025-12-23T23:26:01.010+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMinimumIdle = 5
+2025-12-23T23:26:01.021+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMaximumPoolSize = 10
+2025-12-23T23:26:01.022+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbJPA Properties: {hibernate.implicit_naming_strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl, javax.persistence.schema-generation.database.action=none, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl, javax.persistence.schema-generation.scripts.action=none, hibernate.dialect=org.hibernate.dialect.MySQLDialect}
+2025-12-23T23:26:01.049+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is greater than or equal to maxLifetime, disabling it.
+2025-12-23T23:26:01.051+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-23T23:26:01.900+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23dc70c1
+2025-12-23T23:26:01.907+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-23T23:26:02.025+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: policeRawDbPersistenceUnit]
+2025-12-23T23:26:02.155+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2025-12-23T23:26:03.205+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-23T23:26:03.374+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-23T23:26:03.403+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://10.14.33.43:3306/police_raw]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: police_raw/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-23T23:26:03.845+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:26:03.847+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:26:04.594+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-23T23:26:04.613+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:26:04.613+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:26:04.615+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'policeRawDbPersistenceUnit'
+2025-12-23T23:26:04.679+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevAppConfig            : Init th.go.dxc.config.DevAppConfig
+2025-12-23T23:26:04.823+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2025-12-23T23:26:04.825+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-23T23:26:05.138+07:00  WARN 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rtpNationalCriminalOffenceApiController' defined in file [C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service\target\classes\th\go\dxc\api\controller\RtpNationalCriminalOffenceApiController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'rtpNationalCriminalOffenceService' defined in class path resource [th/go/dxc/config/DevAppConfig.class]: Unsatisfied dependency expressed through method 'rtpNationalCriminalOffenceService' parameter 0: Error creating bean with name 'rtpNationalCriminalOffenceRepository' defined in th.go.dxc.infra.datasource.policeraw.repository.RtpNationalCriminalOffenceRepository defined in @EnableJpaRepositories declared on PoliceRawDbDataSourceConfig: 'net.sf.jsqlparser.statement.select.PlainSelect net.sf.jsqlparser.statement.select.Select.getPlainSelect()'
+2025-12-23T23:26:05.138+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'policeRawDbPersistenceUnit'
+2025-12-23T23:26:05.143+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-23T23:26:05.158+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-23T23:26:05.161+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-23T23:26:05.193+07:00  INFO 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-23T23:26:05.244+07:00 ERROR 39100 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.jpa.repository.query.JSqlParserQueryEnhancer.doWithPlainSelect(JSqlParserQueryEnhancer.java:251)
+
+The following method did not exist:
+
+    'net.sf.jsqlparser.statement.select.PlainSelect net.sf.jsqlparser.statement.select.Select.getPlainSelect()'
+
+The calling method's class, org.springframework.data.jpa.repository.query.JSqlParserQueryEnhancer, was loaded from the following location:
+
+    jar:file:/C:/Workspaces/maven-repo/org/springframework/data/spring-data-jpa/4.0.1/spring-data-jpa-4.0.1.jar!/org/springframework/data/jpa/repository/query/JSqlParserQueryEnhancer.class
+
+The called method's class, net.sf.jsqlparser.statement.select.Select, is available from the following locations:
+
+    jar:file:/C:/Workspaces/maven-repo/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar!/net/sf/jsqlparser/statement/select/Select.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    net.sf.jsqlparser.statement.select.Select: file:/C:/Workspaces/maven-repo/com/github/jsqlparser/jsqlparser/4.6/jsqlparser-4.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.data.jpa.repository.query.JSqlParserQueryEnhancer and net.sf.jsqlparser.statement.select.Select
+
+2025-12-23T23:32:45.735+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Starting DxcQmRtpNationalCriminalOffenseServiceApplication using Java 21.0.4 with PID 25700 (C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service\target\classes started by kitti in C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service)
+2025-12-23T23:32:45.752+07:00 DEBUG 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-23T23:32:45.753+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : The following 1 profile is active: "dev"
+2025-12-23T23:32:50.764+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-23T23:32:51.308+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 521 ms. Found 1 JPA repository interface.
+2025-12-23T23:32:54.290+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88a9af0e-7027-388a-b05d-7f09e2dca3e8
+2025-12-23T23:32:55.509+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-23T23:32:55.567+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-23T23:32:55.572+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-23T23:32:55.812+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 9813 ms
+2025-12-23T23:32:56.210+07:00 DEBUG 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-23T23:32:56.210+07:00 DEBUG 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2025-12-23T23:32:56.273+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbHikariDataSource
+2025-12-23T23:32:56.274+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbDataSourceProperties
+2025-12-23T23:32:56.363+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaProperties
+2025-12-23T23:32:56.396+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaVendorAdapter
+2025-12-23T23:32:56.432+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbEntityManagerFactory
+2025-12-23T23:32:56.433+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getJdbcUrl = jdbc:mysql://10.14.33.43:3306/police_raw
+2025-12-23T23:32:56.437+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMinimumIdle = 5
+2025-12-23T23:32:56.440+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMaximumPoolSize = 10
+2025-12-23T23:32:56.441+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbJPA Properties: {hibernate.implicit_naming_strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl, javax.persistence.schema-generation.database.action=none, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl, javax.persistence.schema-generation.scripts.action=none, hibernate.dialect=org.hibernate.dialect.MySQLDialect}
+2025-12-23T23:32:56.459+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is greater than or equal to maxLifetime, disabling it.
+2025-12-23T23:32:56.459+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-23T23:32:57.340+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bbc1b90
+2025-12-23T23:32:57.342+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-23T23:32:57.431+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: policeRawDbPersistenceUnit]
+2025-12-23T23:32:57.643+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2025-12-23T23:32:58.484+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-23T23:32:58.654+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-23T23:32:58.683+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://10.14.33.43:3306/police_raw]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: police_raw/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-23T23:32:59.229+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:32:59.230+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:33:00.001+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-23T23:33:00.018+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:33:00.020+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:33:00.025+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'policeRawDbPersistenceUnit'
+2025-12-23T23:33:00.101+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevAppConfig            : Init th.go.dxc.config.DevAppConfig
+2025-12-23T23:33:00.228+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2025-12-23T23:33:00.228+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-23T23:33:00.815+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevWebConfig            : Init th.go.dxc.config.DevWebConfig$$SpringCGLIB$$0
+2025-12-23T23:33:01.142+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevApiConfig            : Init th.go.dxc.config.DevApiConfig
+2025-12-23T23:33:01.144+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevSecurityConfig       : Init th.go.dxc.config.DevSecurityConfig
+2025-12-23T23:33:01.949+07:00  WARN 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devSecurityFilterChain' defined in class path resource [th/go/dxc/config/DevSecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'devSecurityFilterChain' threw exception with message: {*...} or ** pattern elements should be placed at the start or end of the pattern
+2025-12-23T23:33:01.951+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'policeRawDbPersistenceUnit'
+2025-12-23T23:33:01.958+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-23T23:33:01.972+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-23T23:33:01.983+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-23T23:33:02.023+07:00  INFO 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-23T23:33:02.067+07:00 ERROR 25700 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid mapping pattern detected:
+/services/**/v3/api-docs
+          ^
+{*...} or ** pattern elements should be placed at the start or end of the pattern
+
+Action:
+
+Fix this pattern in your application or switch to the legacy parser implementation with 'spring.mvc.pathmatch.matching-strategy=ant_path_matcher'.
+
+2025-12-23T23:42:19.607+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Starting DxcQmRtpNationalCriminalOffenseServiceApplication using Java 21.0.4 with PID 102012 (C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service\target\classes started by kitti in C:\Workspaces\vscode-workspace\dxc-workspace\dxc-qm-rtp-national-criminal-offense-service)
+2025-12-23T23:42:19.613+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Running with Spring Boot v4.0.1, Spring v7.0.2
+2025-12-23T23:42:19.614+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : The following 1 profile is active: "dev"
+2025-12-23T23:42:23.215+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-23T23:42:23.638+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 400 ms. Found 1 JPA repository interface.
+2025-12-23T23:42:25.745+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88a9af0e-7027-388a-b05d-7f09e2dca3e8
+2025-12-23T23:42:27.448+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-23T23:42:27.520+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-23T23:42:27.524+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-23T23:42:27.898+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 8148 ms
+2025-12-23T23:42:29.330+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-12-23T23:42:29.333+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2025-12-23T23:42:29.473+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbHikariDataSource
+2025-12-23T23:42:29.474+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbDataSourceProperties
+2025-12-23T23:42:29.625+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaProperties
+2025-12-23T23:42:29.698+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbJpaVendorAdapter
+2025-12-23T23:42:29.849+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbEntityManagerFactory
+2025-12-23T23:42:29.851+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getJdbcUrl = jdbc:mysql://10.14.33.43:3306/police_raw
+2025-12-23T23:42:29.856+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMinimumIdle = 5
+2025-12-23T23:42:29.859+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbHikariDataSource.getMaximumPoolSize = 10
+2025-12-23T23:42:29.870+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : policeRawDbJPA Properties: {hibernate.implicit_naming_strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl, javax.persistence.schema-generation.database.action=none, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl, javax.persistence.schema-generation.scripts.action=none, hibernate.dialect=org.hibernate.dialect.MySQLDialect}
+2025-12-23T23:42:29.904+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is greater than or equal to maxLifetime, disabling it.
+2025-12-23T23:42:29.921+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-23T23:42:31.048+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18df26a1
+2025-12-23T23:42:31.052+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-23T23:42:31.129+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: policeRawDbPersistenceUnit]
+2025-12-23T23:42:31.251+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2025-12-23T23:42:32.225+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-23T23:42:32.374+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-23T23:42:32.406+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://10.14.33.43:3306/police_raw]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: police_raw/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-23T23:42:32.852+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:42:32.853+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:42:33.879+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-23T23:42:33.890+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.database.action], use [jakarta.persistence.schema-generation.database.action] instead
+2025-12-23T23:42:33.890+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.schema-generation.scripts.action], use [jakarta.persistence.schema-generation.scripts.action] instead
+2025-12-23T23:42:33.892+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'policeRawDbPersistenceUnit'
+2025-12-23T23:42:33.941+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevAppConfig            : Init th.go.dxc.config.DevAppConfig
+2025-12-23T23:42:34.046+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2025-12-23T23:42:34.048+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-23T23:42:34.526+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevWebConfig            : Init th.go.dxc.config.DevWebConfig$$SpringCGLIB$$0
+2025-12-23T23:42:34.827+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevApiConfig            : Init th.go.dxc.config.DevApiConfig
+2025-12-23T23:42:34.828+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] th.go.dxc.config.DevSecurityConfig       : Init th.go.dxc.config.DevSecurityConfig
+2025-12-23T23:42:35.669+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2025-12-23T23:42:35.787+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-12-23T23:42:35.875+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-23T23:42:36.241+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-12-23T23:42:36.328+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] t.g.d.i.d.p.PoliceRawDbDataSourceConfig  : Init policeRawDbTransactionManager
+2025-12-23T23:42:36.560+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-23T23:42:36.717+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-23T23:42:36.727+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] i.g.p.r.RSQLQueryDSLAutoConfiguration    : RSQLQueryDSLAutoConfiguration.rsqlCommonSupport(entityManagerMap:1)
+2025-12-23T23:42:36.730+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] i.g.perplexhub.rsql.RSQLCommonSupport    : 1 EntityManager bean is found: {policeRawDbEntityManagerFactory=Shared EntityManager proxy for target factory [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@37b0a724]}
+2025-12-23T23:42:36.739+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] i.g.perplexhub.rsql.RSQLCommonSupport    : RSQLCommonSupport [6.0.33]  is initialized
+2025-12-23T23:42:37.138+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/h2-console/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-12-23T23:42:37.138+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore PathPattern [/mock/**]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-12-23T23:42:37.251+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2025-12-23T23:42:37.335+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-23T23:42:37.507+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2025-12-23T23:42:37.545+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [main] ationalCriminalOffenseServiceApplication : Started DxcQmRtpNationalCriminalOffenseServiceApplication in 18.925 seconds (process running for 20.491)
+2025-12-23T23:42:39.983+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-23T23:42:39.993+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-23T23:42:39.994+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-12-23T23:42:39.994+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-12-23T23:42:39.997+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@61ae22d4
+2025-12-23T23:42:39.999+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1b7bab7e
+2025-12-23T23:42:40.001+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-12-23T23:42:40.001+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-12-23T23:43:57.469+07:00  WARN 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/qm/v2/rtp/national-criminal-offence' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-12-23T23:44:29.229+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/?id=97d8ad3d-289e-4c64-bf07-c8e32973ac62&vscodeBrowserReqId=1766508269218", parameters={masked}
+2025-12-23T23:44:29.308+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-12-23T23:44:29.530+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.240+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2025-12-23T23:44:31.245+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.265+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.279+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-12-23T23:44:31.284+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2025-12-23T23:44:31.297+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-12-23T23:44:31.300+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-12-23T23:44:31.308+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-12-23T23:44:31.309+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.328+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.335+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.342+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.357+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-12-23T23:44:31.371+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.374+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.386+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.434+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.435+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.623+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2025-12-23T23:44:31.625+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-12-23T23:44:31.644+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2025-12-23T23:44:31.646+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, filter=true, oauth2RedirectUrl=http://localhost:8081/swagger (truncated)...]
+2025-12-23T23:44:31.658+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-12-23T23:44:31.669+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2025-12-23T23:44:31.671+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2025-12-23T23:44:32.295+07:00  INFO 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 607 ms
+2025-12-23T23:44:32.336+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-12-23T23:44:32.341+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [{7b226f70656e617069223a22332e312e30222c22696e666f223a7b227469746c65223a226478632d716d2d7274702d6e617 (truncated)...]
+2025-12-23T23:44:32.345+07:00 DEBUG 102012 --- [dxc-qm-rtp-national-criminal-offense-service] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

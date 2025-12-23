@@ -89,10 +89,10 @@ infra.datasource.police-raw-db:
     max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
   jpa:
     show-sql: false # Attention Required!!
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     open-in-view: true  # have the same EntityManager until the web request is finished
     properties:
-      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
       # Naming Convention Properties      
       hibernate.physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       hibernate.implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
