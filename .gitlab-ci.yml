@@ -22,7 +22,7 @@ maven:test:
   before_script:
     - chmod +x mvnw
   script:
-    - ./mvnw -B -ntp test
+    - ./mvnw -B -e -X -ntp test
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH
