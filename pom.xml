@@ -244,9 +244,9 @@
 		<repository>
 			<id>gitlab-maven</id>
 			<!-- DXC shared library registry (dxc-share-lib-v2) -->
-			<!-- <url>https://gitlab.clearskysolutions.co.th/api/v4/projects/521/packages/maven</url> -->
+			<url>https://gitlab.clearskysolutions.co.th/api/v4/projects/521/packages/maven</url>
 			<!-- NEW (instance scoped) -->
- 		     <url>https://gitlab.clearskysolutions.co.th/api/v4/packages/maven</url>
+ 		     <!-- <url>https://gitlab.clearskysolutions.co.th/api/v4/packages/maven</url> -->
 		</repository>
 	</repositories>
 
