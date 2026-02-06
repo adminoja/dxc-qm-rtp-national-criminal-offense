@@ -41,7 +41,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>4.0.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -53,7 +53,7 @@
 		<orika.version>1.5.4</orika.version>
 		<easy-random.version>5.0.0</easy-random.version>
 		<jsqlparser.version>5.3</jsqlparser.version>
-		<springdoc.version>3.0.0</springdoc.version>
+		<springdoc.version>3.0.1</springdoc.version>
 		<dxc-share-lib.version>2.1.0-RELEASE</dxc-share-lib.version>
 		<gitlab.group-id>5</gitlab.group-id>
 	</properties>
